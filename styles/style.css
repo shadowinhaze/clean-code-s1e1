@@ -133,13 +133,14 @@ li > * {
   width: 226px;
 }
 
-.delete img {
+.delete {
   height: 2em;
-  transform: rotateZ(45deg);
+  background: url("/assets/icons/remove.svg") no-repeat center;
+  transform: rotate(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete img:hover {
+.delete:hover {
   transform: rotateZ(0);
 }
 

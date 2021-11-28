@@ -13,6 +13,11 @@ var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
+const buttonTitles = {
+    edit: 'Edit task item',
+    save: 'Save edited task item',
+    del: 'Delete task item'
+}
 
 //New task list item
 var createNewTaskElement=function(taskString){
@@ -30,7 +35,6 @@ var createNewTaskElement=function(taskString){
 
     //button.delete
     var deleteButton=document.createElement("button");//delete button
-    var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
     label.classList.add('task-name', 'task');
@@ -44,12 +48,12 @@ var createNewTaskElement=function(taskString){
     editInput.type="text";
     editInput.classList.add('task-name-input', 'task');
 
-    editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
+    editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
+    editButton.title = buttonTitles.edit;
     editButton.classList.add('button', 'edit');
 
     deleteButton.classList.add('button', 'delete');
-    deleteButtonImg.src='./assets/icons/remove.svg';
-    deleteButton.appendChild(deleteButtonImg);
+    deleteButton.title = buttonTitles.del;
 
 
     //and appending.
@@ -96,10 +100,12 @@ var editTask=function(){
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
-        editBtn.innerText="Edit";
+        editBtn.innerText = "Edit";
+        editBtn.title = buttonTitles.edit;
     }else{
         editInput.value=label.innerText;
-        editBtn.innerText="Save";
+        editBtn.innerText = "Save";
+        editBtn.title = buttonTitles.save;
     }
 
     //toggle .editmode on the parent.
