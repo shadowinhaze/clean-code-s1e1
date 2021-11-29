@@ -159,7 +159,11 @@
 
 .button_delete {
   height: 2em;
+<<<<<<< HEAD
   background: center / contain no-repeat url("/assets/icons/remove.svg");
+=======
+  background: url("./assets/icons/remove.svg") no-repeat center;
+>>>>>>> bbe1d33b62677935b0fd39c017683f98073f7ea6
   transform: rotate(45deg);
   transition: transform 200ms ease-in;
 }
