@@ -159,7 +159,7 @@
 
 .button_delete {
   height: 2em;
-  background: center / contain no-repeat url("/assets/icons/remove.svg");
+  background: center / contain no-repeat url("./assets/icons/remove.svg");
   transform: rotate(45deg);
   transition: transform 200ms ease-in;
 }
