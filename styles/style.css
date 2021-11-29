@@ -1,0 +1,171 @@
+.todo-app {
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: "Lato", sans-serif;
+}
+
+.app-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ==== SECTIONS ==== */
+
+.app-section_add {
+  margin-top: 16px;
+}
+
+/* >>>> title ==== */
+
+.section-title {
+  padding: 30px 0 10px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+}
+
+.app-section__title {
+  margin: 0;
+}
+
+/* >>>> list ==== */
+
+.task-list {
+  padding: 0;
+  list-style: none;
+}
+
+.app-section__list {
+  margin: 0;
+}
+
+.task-list__item {
+  display: flex;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+
+.app-section_add .task-list__item,
+.task-list__item:last-child {
+  border-bottom: none;
+}
+
+/* >>>> list__item content ==== */
+.task-list__item__checkbox {
+  margin: 0 10px;
+}
+
+.task-name {
+  box-sizing: border-box;
+  display: block;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.task-list__item__name {
+  width: 56%;
+  flex-grow: 1;
+}
+
+.task-list_comleted .task-list__item__name {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-list__item_on-edit .task-list__item__name {
+  display: none;
+}
+
+.task-name-input {
+  box-sizing: border-box;
+  height: 21px;
+  padding: 0 9px;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: #888;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.task-name-input:focus {
+  color: #333;
+}
+
+.task-list__item__name-input {
+  display: none;
+  margin: 0;
+  width: 226px;
+  flex-grow: 1;
+}
+
+.task-list_add .task-list__item__name-input,
+.task-list__item_on-edit .task-list__item__name-input {
+  display: block;
+}
+
+/* ==== ==== ==== */
+
+/* ==== BANER ==== */
+
+.banner {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.banner__cover {
+  width: 100%;
+}
+
+.banner__link {
+  font-family: "Fantasy", cursive;
+}
+
+@media (max-width:768px) {
+
+  .banner {
+    text-align: center;
+  }
+
+}
+
+/* ==== ==== ==== */
+
+/* ==== BUTTONS ==== */
+
+.button {
+  width: 60px;
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  color: #3a3a3a;
+}
+
+.button_delete {
+  height: 2em;
+  background: center / contain no-repeat url("/assets/icons/remove.svg");
+  transform: rotate(45deg);
+  transition: transform 200ms ease-in;
+}
+
+.button_delete:hover {
+  transform: rotateZ(0);
+}
+
+/* ==== ==== ==== */

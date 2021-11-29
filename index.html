@@ -1,19 +1,58 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css" media="screen">
+  </head>
+  <body class="todo-app">
+    <div class="banner">
+      <img class="banner__cover" src="./assets/imgs/eisenhower-matrix.jpg" alt="The Eisenhower Matrix">
+      <a class="banner__link" href="https://goal-life.com/page/method/matrix-eisenhower" title="More details about the Eisenhower Matrix" target="_blank">Want more details?</a>
+    </div>
+    <div class="app-container">
+      <section class="app-section app-section_add">
+        <h3 class="app-section__title section-title">Add Item</h3>
+        <ul class="app-section__list task-list task-list_add">
+          <li class="task-list__item">
+            <input class="task-list__item__name-input task-name-input task-name-input_add" type="text">
+            <button class="button button_add" title="Add new task item">Add</button>
+          </li>
+        </ul>
+      </section>
+      <section class="app-section app-section_todo">
+        <h3 class="app-section__title section-title">Todo</h3>
+        <ul class="app-section__list task-list task-list_todo">
+          <li class="task-list__item">
+            <input type="checkbox" class="task-list__item__checkbox task-checkbox">
+            <label class="task-list__item__name task-name">Pay Bills</label>
+            <input type="text" class="task-list__item__name-input task-name-input">
+            <button class="button button_edit" title="Edit task item">Edit</button>
+            <button class="button button_delete" title="Delete task item"></button>
+          </li>
+          <li class="task-list__item task-list__item_on-edit">
+            <input type="checkbox" class="task-list__item__checkbox task-checkbox">
+            <label class="task-list__item__name task-name">Go Shopping</label>
+            <input type="text" class="task-list__item__name-input task-name-input" value="Go Shopping">
+            <button class="button button_edit" title="Save edited task item">Save</button>
+            <button class="button button_delete" title="Delete task item"></button>
+          </li>
+        </ul>
+      </section>
+      <section class="app-section app-section_completed">
+        <h3 class="app-section__title section-title">Completed</h3>
+        <ul class="app-section__list task-list task-list_comleted">
+          <li class="task-list__item">
+            <input type="checkbox" class="task-list__item__checkbox task-checkbox" checked>
+            <label class="task-list__item__name task-name">See the Doctor</label>
+            <input type="text" class="task-list__item__name-input task-name-input" value="See the Doctor">
+            <button class="button button_edit" title="Edit task item">Edit</button>
+            <button class="button button_delete" title="Delete task item"></button>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <script type="module" src="./js/components/contollers.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
 </html>
